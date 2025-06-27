@@ -1,0 +1,17 @@
+{
+  "name": "my-directus-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@directus/sdk": "^20.0.0",
+    "directus": "^11.9.0",
+    "sqlite3": "^5.1.7"
+  }
+}

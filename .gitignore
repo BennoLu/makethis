@@ -1,0 +1,28 @@
+# Node modules - all folders
+**/node_modules/
+
+# Build outputs
+**/.next/
+**/dist/
+**/build/
+**/.vercel/
+
+# Environment
+**/.env*
+.env*
+
+# Directus-specific (adjust paths as needed)
+**/uploads/
+**/database.db
+**/*.sqlite
+
+# OS
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# VS Code
+.vscode/
