@@ -1,5 +1,7 @@
-import { createDirectus, rest } from '@directus/sdk';
+import { createDirectus, rest, realtime } from '@directus/sdk';
 
-const directus = createDirectus('https://stack-up.directus.app').with(rest());
+const directus = createDirectus('http://localhost:8055')
+  .with(rest())
+  .with(realtime());
 
 export default directus;
