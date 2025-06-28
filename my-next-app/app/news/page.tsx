@@ -13,11 +13,13 @@ export const metadata: Metadata = {
 
 async function getNews(): Promise<NewsItem[]> {
   const res = await fetch(
-    "http://localhost:8055/items/news?limit=10&filter[published][_eq]=true&sort=-created_at",
+    "http://localhost:8055/items/news?limit=10&filter[published][_eq]=true&sort=-sort",
     { cache: "no-store" }
   );
 
   if (!res.ok) {
+    const errorText = await res.text();
+    console.error("❌ Error response body:", errorText);
     throw new Error("Failed to fetch news");
   }
 
