@@ -1,4 +1,9 @@
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
+
+const NewsList = dynamic(() => import("../../components/NewsList"), {
+  ssr: false,
+});
 
 interface NewsItem {
   id: number;
@@ -33,14 +38,7 @@ export default async function NewsPage() {
   return (
     <div>
       <h1>News</h1>
-      <ul>
-        {news.map((item) => (
-          <li key={item.id}>
-            <h2>{item.title}</h2>
-            <p>{item.body}</p>
-          </li>
-        ))}
-      </ul>
+      <NewsList initialNews={news} />
     </div>
   );
 }
